@@ -47,4 +47,3 @@
 	releaseBranch = main
 	versionFile = -
     release = false
-    command = "cargo check"
