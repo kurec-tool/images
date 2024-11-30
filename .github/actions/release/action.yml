@@ -28,10 +28,11 @@ runs:
       id: meta
       with:
         images: ${{ inputs.repository }}/mirakc
+        
         tags: |
-          type=semver,pattern={{version}}
-          type=semver,pattern={{major}}.{{minor}}
-          type=semver,pattern={{major}}
+          type=semver,pattern={{version}},value=${{ inputs.tag }}
+          type=semver,pattern={{major}}.{{minor}},value=${{ inputs.tag }}
+          type=semver,pattern={{major}},value=${{ inputs.tag }}
 
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v3
