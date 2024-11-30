@@ -14,9 +14,9 @@ inputs:
     description: 'The Docker registry username'
     required: true
 
-jobs:
+runs:
   build-and-push:
-    runs-on: ubuntu-latest
+    using: composite
 
     steps:
       - name: Checkout repository
