@@ -22,4 +22,6 @@ jobs:
         with:
           tag: ${{ steps.tagpr.outputs.tag }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          registory: "ghcr.io/${{ github.repository }}"
+          username: ${{ github.actor }}
         if: steps.tagpr.outputs.tag != ''

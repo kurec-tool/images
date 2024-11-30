@@ -7,6 +7,12 @@ inputs:
   token:
     description: 'The GitHub token'
     required: true
+  registory:
+    description: 'The Docker registry'
+    required: true
+  username:
+    description: 'The Docker registry username'
+    required: true
 
 jobs:
   build-and-push:
@@ -22,7 +28,7 @@ jobs:
       - uses: docker/metadata-action@v3
         id: meta
         with:
-          images: ghcr.io/${{ github.repository }}/mirakc
+          images: ${{ inputs.repository }}/mirakc
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
@@ -32,7 +38,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ inputs.username }}
           password: ${{ inputs.token }}
 
       - name: Build and push Docker image
