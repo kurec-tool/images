@@ -1,5 +1,7 @@
 # Changelog
 
+## [v0.0.10](https://github.com/kurec-tool/images/compare/v0.0.9...v0.0.10) - 2024-12-06
+
 ## [v0.0.9](https://github.com/kurec-tool/images/compare/v0.0.8...v0.0.9) - 2024-12-01
 - PR mirakc/miralc#2055 をビルドする by @kounoike in https://github.com/kurec-tool/images/pull/8
 
