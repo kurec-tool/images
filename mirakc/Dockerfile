@@ -5,7 +5,7 @@ FROM mirakc/tools:$TOOLS_TAG AS mirakc-tools
 
 FROM --platform=$BUILDPLATFORM mirakc/buildenv:debian-$TARGETOS-$TARGETARCH$TARGETVARIANT AS mirakc-build
 # COPY . ./
-RUN git clone --depth 1 -b feat-recording-endpoints https://github.com/mirakc/mirakc.git /mirakc
+RUN git clone --depth 1 -b fix-web-openapi https://github.com/mirakc/mirakc.git /mirakc
 WORKDIR /mirakc
 ARG BUILDPLATFORM
 ARG TARGETPLATFORM
