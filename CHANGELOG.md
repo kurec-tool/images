@@ -1,5 +1,7 @@
 # Changelog
 
+## [v0.0.12](https://github.com/kurec-tool/images/compare/v0.0.11...v0.0.12) - 2024-12-12
+
 ## [v0.0.11](https://github.com/kurec-tool/images/compare/v0.0.10...v0.0.11) - 2024-12-07
 
 ## [v0.0.10](https://github.com/kurec-tool/images/compare/v0.0.9...v0.0.10) - 2024-12-06
