@@ -5,7 +5,7 @@ FROM mirakc/tools:$TOOLS_TAG AS mirakc-tools
 
 FROM --platform=$BUILDPLATFORM mirakc/buildenv:debian-$TARGETOS-$TARGETARCH$TARGETVARIANT AS mirakc-build
 # COPY . ./
-RUN git clone --depth 1 -b 3.3.1 https://github.com/mirakc/mirakc.git /mirakc
+RUN git clone --depth 1 -b main https://github.com/mirakc/mirakc.git /mirakc
 WORKDIR /mirakc
 ARG BUILDPLATFORM
 ARG TARGETPLATFORM
